@@ -1,27 +1,32 @@
-# React + TypeScript + Vite
+# React Query Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a repository designed to advance the knowledge of the React Query library. The project is a simple application that fetches data from a json-server and displays it in a list. The user can click on the items to see more details about the item. The application uses the React Query library to manage the data fetching and caching.
 
-Currently, two official plugins are available:
+The application is designed to demonstrate the following features of the React Query library:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Actions (Queries, Mutations, and Subscriptions)
+- Query keys, variables, functions, among others
+- Query invalidation and refetching
+- Query retries
 
-## Expanding the ESLint configuration
+The application also demonstrates the use of the React Query Devtools to inspect the cache and the queries. The application also uses the useQueryClient hook to manually invalidate queries and refetch them. The application also demonstrates the use of the useMutation hook to perform mutations. At the same time, the application demonstrates the use of optimistic updates to update the cache before the mutation is resolved (also optmistic success and error).By the end of the project, the user should have a good understanding of how to use the React Query library to manage the data fetching and caching in a React application.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## json-server installation
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone the repository of the json-server:
+   `git clone https://github.com/matiasagbenitez/fake-api-store.git`
+2. Run `npm install` to install the dependencies
+3. Run `npm run start` to start the server (the server will run on port 3100)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## React Query Store installation
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone the repository
+2. Run `npm install` to install the dependencies
+3. Run `npm run dev` to start the application (the application will run on port 5173)
+
+## Images
+
+![Image](public/img/img_1.png)
+![Image](public/img/img_2.png)
+![Image](public/img/img_3.png)
+![Image](public/img/img_4.png)

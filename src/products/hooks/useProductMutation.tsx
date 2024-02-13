@@ -24,8 +24,9 @@ export const useProductMutation = () => {
 
       return { optimisticProduct };
     },
-    onSuccess: (product, _variables, context) => {
 
+
+    onSuccess: (product, _variables, context) => {
       queryClient.removeQueries({
         queryKey: ["product", { id: context?.optimisticProduct?.id }],
       });
